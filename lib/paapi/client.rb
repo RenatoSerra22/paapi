@@ -27,8 +27,6 @@ module Paapi
 
       if defined?(HTTPX)
         @http = HTTPX.plugin(:persistent)
-      elsif defined?(HTTP)
-        @http = HTTP::Client.new
       else
         @http = nil
       end
